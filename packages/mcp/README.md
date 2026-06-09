@@ -13,11 +13,67 @@ AgentGit 的 MCP Server 适配包。
 
 ## 使用
 
+### 直接启动
+
 ```bash
 npx -y @agentgit/mcp@latest
 ```
 
 MCP 客户端应以 stdio server 的方式启动该命令。
+
+### MCP 客户端配置
+
+如果客户端支持 `mcpServers` 配置，可以按下面方式接入：
+
+```json
+{
+  "mcpServers": {
+    "agentgit": {
+      "command": "npx",
+      "args": ["-y", "@agentgit/mcp@latest"]
+    }
+  }
+}
+```
+
+如果你的客户端要求显式声明 stdio transport，可以保留同样的启动命令，并把 transport 设置为 `stdio`：
+
+```json
+{
+  "mcpServers": {
+    "agentgit": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@agentgit/mcp@latest"]
+    }
+  }
+}
+```
+
+配置完成后，客户端应能看到这些 tools：
+
+- `agentgit_status`
+- `agentgit_save`
+- `agentgit_undo`
+- `agentgit_squash`
+
+### workspacePath
+
+所有 tools 都需要传入 `workspacePath`，建议使用项目根目录的绝对路径。
+
+```json
+{
+  "workspacePath": "/path/to/repo"
+}
+```
+
+Windows 示例：
+
+```json
+{
+  "workspacePath": "D:\\files\\project"
+}
+```
 
 ## 架构边界
 
