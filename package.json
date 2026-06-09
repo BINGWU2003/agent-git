@@ -22,7 +22,6 @@
     "prepublishOnly": "nr build",
     "release": "bumpp",
     "start": "pnpm --filter @agentgit/mcp start",
-    "test": "pnpm run build && vitest run",
     "typecheck": "tsc",
     "prepare": "git config core.hooksPath .githooks && simple-git-hooks && skills-npm"
   },
@@ -39,12 +38,9 @@
     "simple-git-hooks": "catalog:cli",
     "skills-npm": "catalog:cli",
     "tsdown": "catalog:cli",
-    "tsdown-stale-guard": "catalog:testing",
-    "tsnapi": "catalog:testing",
     "tsx": "catalog:cli",
     "typescript": "catalog:cli",
     "vite": "catalog:cli",
-    "vitest": "catalog:testing",
     "zod": "catalog:mcp"
   },
   "simple-git-hooks": {

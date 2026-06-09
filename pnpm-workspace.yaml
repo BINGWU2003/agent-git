@@ -31,10 +31,6 @@ catalogs:
   mcp:
     '@modelcontextprotocol/sdk': ^1.23.3
     zod: ^4.3.6
-  testing:
-    tsdown-stale-guard: ^0.1.2
-    tsnapi: ^0.3.3
-    vitest: ^4.1.6
   types:
     '@types/node': ^25.9.0
 allowBuilds:

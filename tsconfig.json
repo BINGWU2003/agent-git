@@ -11,6 +11,7 @@
       "@agentgit/skill": ["./packages/skill/src/index.ts"]
     },
     "resolveJsonModule": true,
+    "types": ["node"],
     "strict": true,
     "strictNullChecks": true,
     "noEmit": true,
