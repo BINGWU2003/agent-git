@@ -16,8 +16,8 @@
   "keywords": [],
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm -r build",
-    "dev": "pnpm -r --parallel dev",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
     "lint": "eslint",
     "prepublishOnly": "nr build",
     "release": "bumpp",
@@ -39,6 +39,7 @@
     "skills-npm": "catalog:cli",
     "tsdown": "catalog:cli",
     "tsx": "catalog:cli",
+    "turbo": "catalog:cli",
     "typescript": "catalog:cli",
     "unrun": "catalog:cli",
     "vite": "catalog:cli",

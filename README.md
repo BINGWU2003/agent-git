@@ -72,6 +72,8 @@ pnpm run lint
 pnpm run build
 ```
 
+`build` 和 `dev` 由 Turborepo 编排，包产物会按 package 依赖关系增量构建并缓存。
+
 ## 许可证
 
 [MIT](./LICENSE) 许可证
