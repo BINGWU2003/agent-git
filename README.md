@@ -74,6 +74,18 @@ pnpm run build
 
 `build` 和 `dev` 由 Turborepo 编排，包产物会按 package 依赖关系增量构建并缓存。
 
+## 发布
+
+项目使用 Changesets 管理版本和发布：
+
+```bash
+pnpm changeset
+pnpm version-packages
+pnpm release
+```
+
+可发布包包括 `@agentgit/core`、`@agentgit/mcp`、`@agentgit/cli` 和 `@agentgit/skill`。`@agentgit/typescript-config` 是内部配置包，不参与发布。
+
 ## 许可证
 
 [MIT](./LICENSE) 许可证
