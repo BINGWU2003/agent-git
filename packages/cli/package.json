@@ -1,7 +1,7 @@
 {
   "name": "@agentgit/cli",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Command-line adapter for AgentGit Git checkpoint workflows.",
   "license": "MIT",
   "exports": {
