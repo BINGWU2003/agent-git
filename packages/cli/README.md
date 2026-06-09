@@ -2,7 +2,7 @@
 
 Agent-Git 的命令行适配包。
 
-CLI 用于 MCP tools 不可用时的 fallback，也可供用户在终端中直接调用。它不直接实现 Git 业务逻辑，只调用 `@agent-git/core`。
+CLI 是 Agent-Git Skill 工作流的运行时调用入口，也支持用户在终端中直接调用。它只负责命令解析、终端输出和调用 `@agent-git/core`，不直接实现 Git 业务逻辑。
 
 ## 命令
 
@@ -30,6 +30,8 @@ npx -y @agent-git/cli@latest squash --workspace /path/to/repo --summary "feat: u
 - `--steps`：回滚步数，默认是 `1`。
 - `--preview`：只预览 squash，不创建正式提交。
 
-## 与 MCP 的关系
+## 与 Skill 和 MCP 的关系
 
-如果 Agent-Git MCP tools 可用，Agent 应优先使用 MCP tools。CLI 主要用于 MCP 不可用的环境，不应在同一个工作流步骤中和 MCP 重复执行同一个动作。
+- Skill 安装后会要求 Agent 通过本 CLI 执行 Agent-Git 工作流。
+- MCP Server 是面向支持 MCP tools 的客户端的独立入口。
+- CLI 和 MCP 都调用 `@agent-git/core`，二者不是主备关系；同一个工作流步骤不应通过两种入口重复执行同一个动作。

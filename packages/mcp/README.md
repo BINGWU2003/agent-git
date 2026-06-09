@@ -4,6 +4,8 @@ Agent-Git 的 MCP Server 适配包。
 
 这个包负责把 `@agent-git/core` 的能力注册为 MCP tools，并把结构化业务结果格式化为 MCP 文本响应。
 
+MCP Server 是面向支持 MCP tools 的 Agent 客户端的入口。Agent-Git Skill 的运行时调用入口是 `@agent-git/cli`，不通过 MCP tools 执行。
+
 ## Tools
 
 - `agent-git_status`：查看当前 Git 状态快照。
@@ -80,7 +82,7 @@ Windows 示例：
 - MCP 层只定义 tool schema、注册 tools 和格式化响应。
 - Git 操作全部通过 `@agent-git/core` 完成。
 - MCP 层不直接调用 `git` 命令。
-- MCP 层不复制 Skill 或 CLI 的工作流文案。
+- MCP 层不复制 Skill 的工作流文案，也不承担 CLI 的命令行交互职责。
 
 ## 错误处理
 
