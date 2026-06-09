@@ -130,6 +130,12 @@ importers:
         specifier: catalog:mcp
         version: 4.4.3
 
+  packages/cli:
+    dependencies:
+      '@agentgit/core':
+        specifier: workspace:*
+        version: link:../core
+
   packages/core: {}
 
   packages/mcp:
@@ -143,6 +149,8 @@ importers:
       zod:
         specifier: catalog:mcp
         version: 4.4.3
+
+  packages/skill: {}
 
 packages:
 
