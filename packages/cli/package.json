@@ -27,6 +27,6 @@
     "@agentgit/core": "workspace:*"
   },
   "devDependencies": {
-    "@agentgit/tsdown-config": "workspace:*"
+    "@agentgit/typescript-config": "workspace:*"
   }
 }

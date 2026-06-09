@@ -123,15 +123,15 @@ importers:
         specifier: workspace:*
         version: link:../core
     devDependencies:
-      '@agentgit/tsdown-config':
+      '@agentgit/typescript-config':
         specifier: workspace:*
-        version: link:../tsdown-config
+        version: link:../typescript-config
 
   packages/core:
     devDependencies:
-      '@agentgit/tsdown-config':
+      '@agentgit/typescript-config':
         specifier: workspace:*
-        version: link:../tsdown-config
+        version: link:../typescript-config
 
   packages/mcp:
     dependencies:
@@ -145,17 +145,17 @@ importers:
         specifier: catalog:mcp
         version: 4.4.3
     devDependencies:
-      '@agentgit/tsdown-config':
+      '@agentgit/typescript-config':
         specifier: workspace:*
-        version: link:../tsdown-config
+        version: link:../typescript-config
 
   packages/skill:
     devDependencies:
-      '@agentgit/tsdown-config':
+      '@agentgit/typescript-config':
         specifier: workspace:*
-        version: link:../tsdown-config
+        version: link:../typescript-config
 
-  packages/tsdown-config:
+  packages/typescript-config:
     devDependencies:
       tsdown:
         specifier: catalog:cli

@@ -1,1 +1,1 @@
-export { nodeBinConfig as default } from '@agentgit/tsdown-config/node'
+export { nodeBinConfig as default } from '@agentgit/typescript-config/node'

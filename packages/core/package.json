@@ -21,6 +21,6 @@
     "dev": "tsdown --watch"
   },
   "devDependencies": {
-    "@agentgit/tsdown-config": "workspace:*"
+    "@agentgit/typescript-config": "workspace:*"
   }
 }

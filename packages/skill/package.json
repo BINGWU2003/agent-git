@@ -25,6 +25,6 @@
     "start": "tsx src/index.ts"
   },
   "devDependencies": {
-    "@agentgit/tsdown-config": "workspace:*"
+    "@agentgit/typescript-config": "workspace:*"
   }
 }
