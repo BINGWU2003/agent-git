@@ -28,6 +28,9 @@ catalogs:
     vite: ^8.0.13
   inlined:
     '@antfu/utils': ^9.3.0
+  mcp:
+    '@modelcontextprotocol/sdk': ^1.23.3
+    zod: ^4.3.6
   testing:
     tsdown-stale-guard: ^0.1.2
     tsnapi: ^0.3.3

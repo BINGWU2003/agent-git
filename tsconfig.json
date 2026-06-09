@@ -4,6 +4,10 @@
     "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "paths": {
+      "@agentgit/core": ["./packages/core/src/index.ts"],
+      "@agentgit/mcp": ["./packages/mcp/src/index.ts"]
+    },
     "resolveJsonModule": true,
     "strict": true,
     "strictNullChecks": true,
@@ -12,5 +16,6 @@
     "verbatimModuleSyntax": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["packages/**/*.ts", "test/**/*.ts", "*.config.ts", "*.config.js"]
 }

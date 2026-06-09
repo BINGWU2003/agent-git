@@ -1,0 +1,6 @@
+export { assertGitRepo, CHECKPOINT_MARKER, createCheckpointMessage, getChangedFiles, git, gitOrEmpty, resolveWorkspacePath } from './git.js'
+export { saveCheckpoint } from './save.js'
+export { squashCheckpoints } from './squash.js'
+export { getContinuousCheckpoints, getStatus } from './status.js'
+export type { CheckpointCommit, SaveOptions, SaveResult, SquashOptions, SquashResult, StatusOptions, StatusResult, UndoOptions, UndoResult, WorkspaceOptions } from './types.js'
+export { undoCheckpoints } from './undo.js'
