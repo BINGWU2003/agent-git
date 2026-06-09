@@ -4,12 +4,14 @@
 
 可发布包：
 
-- `@agentgit/core`
 - `@agentgit/mcp`
 - `@agentgit/cli`
 - `@agentgit/skill`
 
-内部配置包 `@agentgit/typescript-config` 不发布，已在 Changesets 配置中 ignore。
+内部包不发布，已在 Changesets 配置中 ignore：
+
+- `@agentgit/core`
+- `@agentgit/typescript-config`
 
 ## 常用命令
 

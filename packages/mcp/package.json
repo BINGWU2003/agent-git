@@ -24,11 +24,11 @@
     "start": "tsx src/index.ts"
   },
   "dependencies": {
-    "@agentgit/core": "workspace:*",
     "@modelcontextprotocol/sdk": "catalog:mcp",
     "zod": "catalog:mcp"
   },
   "devDependencies": {
+    "@agentgit/core": "workspace:*",
     "@agentgit/typescript-config": "workspace:*"
   }
 }

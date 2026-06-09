@@ -2,6 +2,7 @@
   "name": "@agentgit/core",
   "type": "module",
   "version": "0.0.0",
+  "private": true,
   "description": "Reusable Git checkpoint workflow core for AI coding agents.",
   "license": "MIT",
   "sideEffects": false,

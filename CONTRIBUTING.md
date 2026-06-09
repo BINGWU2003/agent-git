@@ -46,9 +46,11 @@ pnpm changeset
 
 当前可发布包包括：
 
-- `@agentgit/core`
 - `@agentgit/mcp`
 - `@agentgit/cli`
 - `@agentgit/skill`
 
-`@agentgit/typescript-config` 是内部配置包，不参与发布。
+内部包不参与发布：
+
+- `@agentgit/core`
+- `@agentgit/typescript-config`

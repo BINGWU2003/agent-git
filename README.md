@@ -84,7 +84,12 @@ pnpm version-packages
 pnpm release
 ```
 
-可发布包包括 `@agentgit/core`、`@agentgit/mcp`、`@agentgit/cli` 和 `@agentgit/skill`。`@agentgit/typescript-config` 是内部配置包，不参与发布。
+可发布包包括 `@agentgit/mcp`、`@agentgit/cli` 和 `@agentgit/skill`。
+
+内部包不参与发布：
+
+- `@agentgit/core`：内部业务核心，构建时会被打进 `mcp` 和 `cli` 产物。
+- `@agentgit/typescript-config`：内部配置包。
 
 ## 许可证
 

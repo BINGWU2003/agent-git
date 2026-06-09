@@ -23,10 +23,8 @@
     "dev": "tsdown --watch",
     "start": "tsx src/index.ts"
   },
-  "dependencies": {
-    "@agentgit/core": "workspace:*"
-  },
   "devDependencies": {
+    "@agentgit/core": "workspace:*",
     "@agentgit/typescript-config": "workspace:*"
   }
 }
