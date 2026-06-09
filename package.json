@@ -20,7 +20,7 @@
     "changeset": "changeset",
     "dev": "turbo run dev",
     "lint": "eslint",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "pnpm run build",
     "release": "pnpm build && changeset publish",
     "start": "pnpm --filter @agentgit/mcp start",
     "typecheck": "tsc",
@@ -29,10 +29,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
-    "@antfu/ni": "catalog:cli",
-    "@antfu/utils": "catalog:inlined",
     "@changesets/cli": "catalog:cli",
-    "@modelcontextprotocol/sdk": "catalog:mcp",
     "@types/node": "catalog:types",
     "eslint": "catalog:cli",
     "nano-staged": "catalog:cli",
@@ -43,9 +40,7 @@
     "tsx": "catalog:cli",
     "turbo": "catalog:cli",
     "typescript": "catalog:cli",
-    "unrun": "catalog:cli",
-    "vite": "catalog:cli",
-    "zod": "catalog:mcp"
+    "unrun": "catalog:cli"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && pnpm run build && npx nano-staged"

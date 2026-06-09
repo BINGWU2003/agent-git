@@ -15,7 +15,6 @@ packages:
 catalogs:
   cli:
     '@antfu/eslint-config': ^9.0.0
-    '@antfu/ni': ^30.1.0
     '@changesets/cli': ^2.29.7
     eslint: ^10.4.0
     nano-staged: ^1.0.2
@@ -27,9 +26,6 @@ catalogs:
     turbo: ^2.6.3
     typescript: ^6.0.3
     unrun: ^0.2.13
-    vite: ^8.0.13
-  inlined:
-    '@antfu/utils': ^9.3.0
   mcp:
     '@modelcontextprotocol/sdk': ^1.23.3
     zod: ^4.3.6
