@@ -14,6 +14,7 @@ It provides a reusable core package and adapters for MCP, CLI, and installable a
 | `@agentgit/mcp` | MCP server adapter exposing `agentgit_*` tools. |
 | `@agentgit/cli` | Command-line adapter that calls `@agentgit/core`. |
 | `@agentgit/skill` | Installable skill instructions for AgentGit workflows. |
+| `@agentgit/tsdown-config` | Shared tsdown build configuration for workspace packages. |
 
 ## MCP Tools
 
@@ -60,6 +61,7 @@ AgentGit follows a `core + adapters` architecture:
 - `mcp` owns MCP schemas, tool registration, result formatting, and error wrapping.
 - `cli` owns command parsing and terminal output.
 - `skill` owns installable Markdown instructions and platform-specific placement.
+- `tsdown-config` owns shared package build defaults.
 
 Adapters must not duplicate Git business logic from `core`.
 

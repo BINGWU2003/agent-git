@@ -1,0 +1,18 @@
+{
+  "name": "@agentgit/tsdown-config",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared tsdown build configuration for AgentGit packages.",
+  "license": "MIT",
+  "exports": {
+    "./node": {
+      "types": "./node.d.ts",
+      "import": "./node.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:cli"
+  }
+}

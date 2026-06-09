@@ -40,6 +40,7 @@
     "tsdown": "catalog:cli",
     "tsx": "catalog:cli",
     "typescript": "catalog:cli",
+    "unrun": "catalog:cli",
     "vite": "catalog:cli",
     "zod": "catalog:mcp"
   },

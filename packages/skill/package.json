@@ -20,8 +20,11 @@
     "skills"
   ],
   "scripts": {
-    "build": "tsdown src/index.ts --dts --publint",
-    "dev": "tsdown src/index.ts --dts --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "start": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@agentgit/tsdown-config": "workspace:*"
   }
 }

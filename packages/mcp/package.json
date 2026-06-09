@@ -19,13 +19,16 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown src/index.ts --dts --publint",
-    "dev": "tsdown src/index.ts --dts --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "start": "tsx src/index.ts"
   },
   "dependencies": {
     "@agentgit/core": "workspace:*",
     "@modelcontextprotocol/sdk": "catalog:mcp",
     "zod": "catalog:mcp"
+  },
+  "devDependencies": {
+    "@agentgit/tsdown-config": "workspace:*"
   }
 }

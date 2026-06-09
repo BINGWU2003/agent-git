@@ -17,7 +17,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown src/index.ts --dts --publint",
-    "dev": "tsdown src/index.ts --dts --watch"
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "devDependencies": {
+    "@agentgit/tsdown-config": "workspace:*"
   }
 }
