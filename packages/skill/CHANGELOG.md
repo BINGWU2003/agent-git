@@ -1,4 +1,4 @@
-# @agentgit/skill
+# @agent-git/skill
 
 ## 1.0.0
 

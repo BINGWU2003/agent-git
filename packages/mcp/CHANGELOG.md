@@ -1,4 +1,4 @@
-# @agentgit/mcp
+# @agent-git/mcp
 
 ## 1.0.0
 

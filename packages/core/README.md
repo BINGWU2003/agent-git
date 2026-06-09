@@ -1,6 +1,6 @@
-# @agentgit/core
+# @agent-git/core
 
-AgentGit 的核心业务包，负责 Git checkpoint 工作流逻辑。
+Agent-Git 的核心业务包，负责 Git checkpoint 工作流逻辑。
 
 这个包是 workspace 内部包，不单独发布到 npm。它不依赖 MCP SDK，不定义 MCP schema，也不输出 Agent Skill 文案。它只提供可复用的 TypeScript API，供 MCP、CLI、Skill fallback 或未来 SDK 入口调用。
 
@@ -22,7 +22,7 @@ import {
   saveCheckpoint,
   squashCheckpoints,
   undoCheckpoints,
-} from '@agentgit/core'
+} from '@agent-git/core'
 ```
 
 ### `getStatus(options)`

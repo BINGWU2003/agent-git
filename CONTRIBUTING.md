@@ -1,8 +1,8 @@
 # 贡献指南
 
-感谢你关注 AgentGit。
+感谢你关注 Agent-Git。
 
-AgentGit 是面向 AI 编程助手的 Git 工作流工具包，核心目标是让 checkpoint、回滚、状态查看和 squash 工作流可以被 MCP、Skill、CLI 等入口复用。
+Agent-Git 是面向 AI 编程助手的 Git 工作流工具包，核心目标是让 checkpoint、回滚、状态查看和 squash 工作流可以被 MCP、Skill、CLI 等入口复用。
 
 ## 开发环境
 
@@ -23,7 +23,7 @@ pnpm run build
 
 ## 代码边界
 
-- Git 业务逻辑只能放在 `@agentgit/core`。
+- Git 业务逻辑只能放在 `@agent-git/core`。
 - MCP 层只负责 tool schema、注册和响应格式化。
 - Skill 只放工作流说明，不复制 Git 业务逻辑。
 - CLI 只负责参数解析和终端输出。
@@ -46,11 +46,11 @@ pnpm changeset
 
 当前可发布包包括：
 
-- `@agentgit/mcp`
-- `@agentgit/cli`
-- `@agentgit/skill`
+- `@agent-git/mcp`
+- `@agent-git/cli`
+- `@agent-git/skill`
 
 内部包不参与发布：
 
-- `@agentgit/core`
-- `@agentgit/typescript-config`
+- `@agent-git/core`
+- `@agent-git/typescript-config`

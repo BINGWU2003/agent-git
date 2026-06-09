@@ -8,7 +8,7 @@ import { tools } from './tools.js'
 
 export function createServer(): McpServer {
   const server = new McpServer(
-    { name: '@agentgit/mcp', version: '0.0.0' },
+    { name: '@agent-git/mcp', version: '0.0.0' },
     { capabilities: { tools: {} } },
   )
 

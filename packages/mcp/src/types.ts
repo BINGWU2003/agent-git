@@ -3,7 +3,7 @@ import type { z } from 'zod'
 
 export type { CallToolResult }
 
-export interface AgentGitTool {
+export interface McpTool {
   name: string
   description: string
   inputSchema: Record<string, z.ZodType>

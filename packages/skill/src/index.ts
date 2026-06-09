@@ -78,11 +78,11 @@ async function installSkillFile(target: Exclude<SkillTarget, 'all'>, force: bool
 }
 
 function getSkillTemplatePath(): string {
-  return resolve(dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'agentgit', 'SKILL.md')
+  return resolve(dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'agent-git', 'SKILL.md')
 }
 
 function getSkillFilePath(target: Exclude<SkillTarget, 'all'>): string {
-  return resolve(process.cwd(), `.${target}`, 'skills', 'agentgit', 'SKILL.md')
+  return resolve(process.cwd(), `.${target}`, 'skills', 'agent-git', 'SKILL.md')
 }
 
 function parseSkillTarget(value: string): SkillTarget {
@@ -102,12 +102,12 @@ function readOptionValue(args: string[], index: number, option: string): string 
 }
 
 function printHelp(): void {
-  writeLine(`AgentGit Skill
+  writeLine(`Agent-Git Skill
 
 Usage:
-  agentgit-skill install [--target opencode|claude|codex|all] [--force]
+  agent-git-skill install [--target opencode|claude|codex|all] [--force]
 
-The skill installs workflow instructions only. Git operations are still executed through AgentGit MCP tools or the AgentGit CLI fallback.
+The skill installs workflow instructions only. Git operations are executed through Agent-Git CLI.
 `)
 }
 

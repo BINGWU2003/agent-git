@@ -5,10 +5,10 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "@agentgit/cli": ["./packages/cli/src/index.ts"],
-      "@agentgit/core": ["./packages/core/src/index.ts"],
-      "@agentgit/mcp": ["./packages/mcp/src/index.ts"],
-      "@agentgit/skill": ["./packages/skill/src/index.ts"]
+      "@agent-git/cli": ["./packages/cli/src/index.ts"],
+      "@agent-git/core": ["./packages/core/src/index.ts"],
+      "@agent-git/mcp": ["./packages/mcp/src/index.ts"],
+      "@agent-git/skill": ["./packages/skill/src/index.ts"]
     },
     "resolveJsonModule": true,
     "types": ["node"],

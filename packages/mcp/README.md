@@ -1,22 +1,22 @@
-# @agentgit/mcp
+# @agent-git/mcp
 
-AgentGit 的 MCP Server 适配包。
+Agent-Git 的 MCP Server 适配包。
 
-这个包负责把 `@agentgit/core` 的能力注册为 MCP tools，并把结构化业务结果格式化为 MCP 文本响应。
+这个包负责把 `@agent-git/core` 的能力注册为 MCP tools，并把结构化业务结果格式化为 MCP 文本响应。
 
 ## Tools
 
-- `agentgit_status`：查看当前 Git 状态快照。
-- `agentgit_save`：修改前创建 AI checkpoint。
-- `agentgit_undo`：按步数回滚。
-- `agentgit_squash`：预览或执行 checkpoint squash。
+- `agent-git_status`：查看当前 Git 状态快照。
+- `agent-git_save`：修改前创建 AI checkpoint。
+- `agent-git_undo`：按步数回滚。
+- `agent-git_squash`：预览或执行 checkpoint squash。
 
 ## 使用
 
 ### 直接启动
 
 ```bash
-npx -y @agentgit/mcp@latest
+npx -y @agent-git/mcp@latest
 ```
 
 MCP 客户端应以 stdio server 的方式启动该命令。
@@ -28,9 +28,9 @@ MCP 客户端应以 stdio server 的方式启动该命令。
 ```json
 {
   "mcpServers": {
-    "agentgit": {
+    "agent-git": {
       "command": "npx",
-      "args": ["-y", "@agentgit/mcp@latest"]
+      "args": ["-y", "@agent-git/mcp@latest"]
     }
   }
 }
@@ -41,10 +41,10 @@ MCP 客户端应以 stdio server 的方式启动该命令。
 ```json
 {
   "mcpServers": {
-    "agentgit": {
+    "agent-git": {
       "transport": "stdio",
       "command": "npx",
-      "args": ["-y", "@agentgit/mcp@latest"]
+      "args": ["-y", "@agent-git/mcp@latest"]
     }
   }
 }
@@ -52,10 +52,10 @@ MCP 客户端应以 stdio server 的方式启动该命令。
 
 配置完成后，客户端应能看到这些 tools：
 
-- `agentgit_status`
-- `agentgit_save`
-- `agentgit_undo`
-- `agentgit_squash`
+- `agent-git_status`
+- `agent-git_save`
+- `agent-git_undo`
+- `agent-git_squash`
 
 ### workspacePath
 
@@ -78,7 +78,7 @@ Windows 示例：
 ## 架构边界
 
 - MCP 层只定义 tool schema、注册 tools 和格式化响应。
-- Git 操作全部通过 `@agentgit/core` 完成。
+- Git 操作全部通过 `@agent-git/core` 完成。
 - MCP 层不直接调用 `git` 命令。
 - MCP 层不复制 Skill 或 CLI 的工作流文案。
 

@@ -1,8 +1,8 @@
 {
-  "name": "@agentgit/skill",
+  "name": "@agent-git/skill",
   "type": "module",
   "version": "1.0.0",
-  "description": "Installable AgentGit skill instructions for AI coding agents.",
+  "description": "Installable Agent-Git skill instructions for AI coding agents.",
   "license": "MIT",
   "exports": {
     ".": {
@@ -13,7 +13,7 @@
   },
   "types": "./dist/index.d.mts",
   "bin": {
-    "agentgit-skill": "dist/index.mjs"
+    "agent-git-skill": "dist/index.mjs"
   },
   "files": [
     "dist",
@@ -28,6 +28,6 @@
     "start": "tsx src/index.ts"
   },
   "devDependencies": {
-    "@agentgit/typescript-config": "workspace:*"
+    "@agent-git/typescript-config": "workspace:*"
   }
 }

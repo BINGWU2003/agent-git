@@ -1,8 +1,8 @@
 {
-  "name": "@agentgit/cli",
+  "name": "@agent-git/cli",
   "type": "module",
   "version": "1.0.0",
-  "description": "Command-line adapter for AgentGit Git checkpoint workflows.",
+  "description": "Command-line adapter for Agent-Git Git checkpoint workflows.",
   "license": "MIT",
   "exports": {
     ".": {
@@ -13,7 +13,7 @@
   },
   "types": "./dist/index.d.mts",
   "bin": {
-    "agentgit": "dist/index.mjs"
+    "agent-git": "dist/index.mjs"
   },
   "files": [
     "dist"
@@ -27,7 +27,7 @@
     "start": "tsx src/index.ts"
   },
   "devDependencies": {
-    "@agentgit/core": "workspace:*",
-    "@agentgit/typescript-config": "workspace:*"
+    "@agent-git/core": "workspace:*",
+    "@agent-git/typescript-config": "workspace:*"
   }
 }

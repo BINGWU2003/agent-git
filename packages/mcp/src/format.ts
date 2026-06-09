@@ -1,4 +1,4 @@
-import type { SaveResult, SquashResult, StatusResult, UndoResult } from '@agentgit/core'
+import type { SaveResult, SquashResult, StatusResult, UndoResult } from '@agent-git/core'
 import type { CallToolResult } from './types.js'
 
 export function textResult(text: string): CallToolResult {
@@ -12,7 +12,7 @@ export function formatStatus(result: StatusResult): string {
 
   const checkpointStatus = result.checkpointCount === 0
     ? '无待合并的 AI Checkpoint'
-    : `有 ${result.checkpointCount} 个连续 AI Checkpoint 待合并（可调用 agentgit_squash 压缩）`
+    : `有 ${result.checkpointCount} 个连续 AI Checkpoint 待合并（可调用 agent-git_squash 压缩）`
 
   const recentCommits = result.recentCommits.length > 0
     ? result.recentCommits.map((line, index) => `  ${index + 1}. ${line}`).join('\n')
@@ -64,7 +64,7 @@ export function formatSquash(result: SquashResult): string {
       )
     }
 
-    lines.push('', '确认无误后，请以 preview: false 重新调用 agentgit_squash 执行合并。')
+    lines.push('', '确认无误后，请以 preview: false 重新调用 agent-git_squash 执行合并。')
     return lines.join('\n')
   }
 

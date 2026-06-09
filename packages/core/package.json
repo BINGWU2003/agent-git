@@ -1,5 +1,5 @@
 {
-  "name": "@agentgit/core",
+  "name": "@agent-git/core",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -22,6 +22,6 @@
     "dev": "tsdown --watch"
   },
   "devDependencies": {
-    "@agentgit/typescript-config": "workspace:*"
+    "@agent-git/typescript-config": "workspace:*"
   }
 }

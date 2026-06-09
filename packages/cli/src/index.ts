@@ -2,7 +2,7 @@
 import { resolve } from 'node:path'
 import process from 'node:process'
 import { pathToFileURL } from 'node:url'
-import { getStatus, saveCheckpoint, squashCheckpoints, undoCheckpoints } from '@agentgit/core'
+import { getStatus, saveCheckpoint, squashCheckpoints, undoCheckpoints } from '@agent-git/core'
 
 interface ParsedArgs {
   command?: string
@@ -119,7 +119,7 @@ function formatStatus(result: ReturnType<typeof getStatus>): string {
 
   const checkpointStatus = result.checkpointCount === 0
     ? '无待合并的 AI Checkpoint'
-    : `有 ${result.checkpointCount} 个连续 AI Checkpoint 待合并（可执行 agentgit squash 压缩）`
+    : `有 ${result.checkpointCount} 个连续 AI Checkpoint 待合并（可执行 agent-git squash 压缩）`
 
   const recentCommits = result.recentCommits.length > 0
     ? result.recentCommits.map((line, index) => `  ${index + 1}. ${line}`).join('\n')
@@ -163,7 +163,7 @@ function formatSquash(result: ReturnType<typeof squashCheckpoints>): string {
       )
     }
 
-    lines.push('', '确认无误后，请执行 agentgit squash --summary "..." 完成合并。')
+    lines.push('', '确认无误后，请执行 agent-git squash --summary "..." 完成合并。')
     return lines.join('\n')
   }
 
@@ -177,13 +177,13 @@ function formatSquash(result: ReturnType<typeof squashCheckpoints>): string {
 }
 
 function printHelp(): void {
-  writeLine(`AgentGit CLI
+  writeLine(`Agent-Git CLI
 
 Usage:
-  agentgit status [--workspace <path>]
-  agentgit save "message" [--workspace <path>]
-  agentgit undo [--steps <number>] [--workspace <path>]
-  agentgit squash "summary" [--preview] [--workspace <path>]
+  agent-git status [--workspace <path>]
+  agent-git save "message" [--workspace <path>]
+  agent-git undo [--steps <number>] [--workspace <path>]
+  agent-git squash "summary" [--preview] [--workspace <path>]
 
 Options:
   -w, --workspace <path>  Git workspace path. Defaults to the current directory.

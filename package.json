@@ -1,5 +1,5 @@
 {
-  "name": "agentgit",
+  "name": "agent-git",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -7,12 +7,12 @@
   "description": "Git workflow toolkit for AI coding agents.",
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/agentgit/agentgit#readme",
+  "homepage": "https://github.com/agent-git/agent-git#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agentgit/agentgit.git"
+    "url": "git+https://github.com/agent-git/agent-git.git"
   },
-  "bugs": "https://github.com/agentgit/agentgit/issues",
+  "bugs": "https://github.com/agent-git/agent-git/issues",
   "keywords": [],
   "sideEffects": false,
   "scripts": {
@@ -22,7 +22,7 @@
     "lint": "eslint",
     "prepublishOnly": "pnpm run build",
     "release": "pnpm build && changeset publish",
-    "start": "pnpm --filter @agentgit/mcp start",
+    "start": "pnpm --filter @agent-git/mcp start",
     "typecheck": "tsc",
     "version-packages": "changeset version",
     "prepare": "git config core.hooksPath .githooks && simple-git-hooks && skills-npm"

@@ -1,4 +1,4 @@
-# @agentgit/cli
+# @agent-git/cli
 
 ## 1.0.0
 

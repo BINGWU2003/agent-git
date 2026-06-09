@@ -1,57 +1,57 @@
-# AgentGit
+# Agent-Git
 
 面向 AI 编程助手的 Git 工作流工具包。
 
-AgentGit 帮助 AI 编程助手在修改代码时安全管理 Git 历史：修改前创建临时 checkpoint，失败时回滚，完成后把多个 checkpoint 和未提交变更压缩成一个整洁的正式提交。
+Agent-Git 帮助 AI 编程助手在修改代码时安全管理 Git 历史：修改前创建临时 checkpoint，失败时回滚，完成后把多个 checkpoint 和未提交变更压缩成一个整洁的正式提交。
 
-项目采用 `core + adapters` 架构。Git 业务逻辑只存在于 `@agentgit/core`，MCP、CLI 和 Skill 都只是入口适配层。
+项目采用 `core + adapters` 架构。Git 业务逻辑只存在于 `@agent-git/core`，MCP、CLI 和 Skill 都只是入口适配层。
 
 ## 包列表
 
 | 包 | 职责 |
 | --- | --- |
-| `@agentgit/core` | Git checkpoint 工作流的核心业务逻辑。 |
-| `@agentgit/mcp` | MCP Server 适配器，暴露 `agentgit_*` tools。 |
-| `@agentgit/cli` | 命令行适配器，调用 `@agentgit/core`。 |
-| `@agentgit/skill` | 可安装的 AgentGit Skill 工作流说明。 |
-| `@agentgit/typescript-config` | 共享 TypeScript、tsdown 等 TS 相关配置。 |
+| `@agent-git/core` | Git checkpoint 工作流的核心业务逻辑。 |
+| `@agent-git/mcp` | MCP Server 适配器，暴露 `agent-git_*` tools。 |
+| `@agent-git/cli` | 命令行适配器，调用 `@agent-git/core`。 |
+| `@agent-git/skill` | 可安装的 Agent-Git Skill 工作流说明。 |
+| `@agent-git/typescript-config` | 共享 TypeScript、tsdown 等 TS 相关配置。 |
 
 ## MCP Tools
 
-`@agentgit/mcp` 提供以下工具：
+`@agent-git/mcp` 提供以下工具：
 
-- `agentgit_status`：查看分支、工作区变更、连续 checkpoint 数量和最近提交。
-- `agentgit_save`：在修改前创建 AI checkpoint。
-- `agentgit_undo`：回滚最近的 checkpoint 或提交步数。
-- `agentgit_squash`：把连续 checkpoint 和未提交变更压缩为正式 commit。
+- `agent-git_status`：查看分支、工作区变更、连续 checkpoint 数量和最近提交。
+- `agent-git_save`：在修改前创建 AI checkpoint。
+- `agent-git_undo`：回滚最近的 checkpoint 或提交步数。
+- `agent-git_squash`：把连续 checkpoint 和未提交变更压缩为正式 commit。
 
 ## CLI
 
 ```bash
-npx -y @agentgit/cli@latest status --workspace /path/to/repo
-npx -y @agentgit/cli@latest save --workspace /path/to/repo --message "准备重构"
-npx -y @agentgit/cli@latest undo --workspace /path/to/repo --steps 1
-npx -y @agentgit/cli@latest squash --workspace /path/to/repo --summary "feat: add checkout flow" --preview
+npx -y @agent-git/cli@latest status --workspace /path/to/repo
+npx -y @agent-git/cli@latest save --workspace /path/to/repo --message "准备重构"
+npx -y @agent-git/cli@latest undo --workspace /path/to/repo --steps 1
+npx -y @agent-git/cli@latest squash --workspace /path/to/repo --summary "feat: add checkout flow" --preview
 ```
 
-CLI 是 MCP 不可用时的备用入口。它不直接实现 Git 业务逻辑，只调用 `@agentgit/core`。
+CLI 是 MCP 不可用时的备用入口。它不直接实现 Git 业务逻辑，只调用 `@agent-git/core`。
 
 ## Skill
 
-安装 AgentGit 工作流说明到 Agent 客户端：
+安装 Agent-Git 工作流说明到 Agent 客户端：
 
 ```bash
-npx -y @agentgit/skill@latest install --target opencode
-npx -y @agentgit/skill@latest install --target all --force
+npx -y @agent-git/skill@latest install --target opencode
+npx -y @agent-git/skill@latest install --target all --force
 ```
 
 支持的安装目标：
 
-- `opencode` -> `.opencode/skills/agentgit/SKILL.md`
-- `claude` -> `.claude/skills/agentgit/SKILL.md`
-- `codex` -> `.codex/skills/agentgit/SKILL.md`
+- `opencode` -> `.opencode/skills/agent-git/SKILL.md`
+- `claude` -> `.claude/skills/agent-git/SKILL.md`
+- `codex` -> `.codex/skills/agent-git/SKILL.md`
 
-Skill 只描述工作流规则。运行时应优先使用 AgentGit MCP tools；如果 MCP tools 不可用，再使用 CLI 作为 fallback。
+Skill 只描述工作流规则。运行时通过 Agent-Git CLI 执行，不调用 MCP tools。
 
 ## 架构原则
 
@@ -84,12 +84,12 @@ pnpm version-packages
 pnpm release
 ```
 
-可发布包包括 `@agentgit/mcp`、`@agentgit/cli` 和 `@agentgit/skill`。
+可发布包包括 `@agent-git/mcp`、`@agent-git/cli` 和 `@agent-git/skill`。
 
 内部包不参与发布：
 
-- `@agentgit/core`：内部业务核心，构建时会被打进 `mcp` 和 `cli` 产物。
-- `@agentgit/typescript-config`：内部配置包。
+- `@agent-git/core`：内部业务核心，构建时会被打进 `mcp` 和 `cli` 产物。
+- `@agent-git/typescript-config`：内部配置包。
 
 ## 许可证
 

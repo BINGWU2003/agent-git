@@ -1,8 +1,8 @@
 {
-  "name": "@agentgit/mcp",
+  "name": "@agent-git/mcp",
   "type": "module",
   "version": "1.0.0",
-  "description": "MCP adapter for AgentGit Git checkpoint workflows.",
+  "description": "MCP adapter for Agent-Git Git checkpoint workflows.",
   "license": "MIT",
   "exports": {
     ".": {
@@ -13,7 +13,7 @@
   },
   "types": "./dist/index.d.mts",
   "bin": {
-    "agentgit-mcp": "dist/index.mjs"
+    "agent-git-mcp": "dist/index.mjs"
   },
   "files": [
     "dist"
@@ -31,7 +31,7 @@
     "zod": "catalog:mcp"
   },
   "devDependencies": {
-    "@agentgit/core": "workspace:*",
-    "@agentgit/typescript-config": "workspace:*"
+    "@agent-git/core": "workspace:*",
+    "@agent-git/typescript-config": "workspace:*"
   }
 }

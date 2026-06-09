@@ -1,1 +1,1 @@
-export { nodeLibraryConfig as default } from '@agentgit/typescript-config/node'
+export { nodeLibraryConfig as default } from '@agent-git/typescript-config/node'

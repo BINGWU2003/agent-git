@@ -5,7 +5,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [],
-  "ignore": ["@agentgit/core", "@agentgit/typescript-config"],
+  "ignore": ["@agent-git/core", "@agent-git/typescript-config"],
   "linked": [],
   "updateInternalDependencies": "patch"
 }

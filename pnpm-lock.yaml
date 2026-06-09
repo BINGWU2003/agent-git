@@ -100,16 +100,16 @@ importers:
 
   packages/cli:
     devDependencies:
-      '@agentgit/core':
+      '@agent-git/core':
         specifier: workspace:*
         version: link:../core
-      '@agentgit/typescript-config':
+      '@agent-git/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
 
   packages/core:
     devDependencies:
-      '@agentgit/typescript-config':
+      '@agent-git/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
 
@@ -122,16 +122,16 @@ importers:
         specifier: catalog:mcp
         version: 4.4.3
     devDependencies:
-      '@agentgit/core':
+      '@agent-git/core':
         specifier: workspace:*
         version: link:../core
-      '@agentgit/typescript-config':
+      '@agent-git/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
 
   packages/skill:
     devDependencies:
-      '@agentgit/typescript-config':
+      '@agent-git/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
 
